@@ -1,0 +1,113 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    padding-top: 1vw;
+    font-size: 3vw;
+    line-height: 0.2vw;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.square {
+  background: #fff;
+  border: 1px solid #000;
+  float: left;
+  font-size: 5vw;
+  font-weight: bold;
+  height: 7vw;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 1vw;
+  text-align: center;
+  width: 7vw;
+}
+
+.square {
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.oTurn:hover {
+  background-color: #ffcccb;
+}
+
+.xTurn:hover {
+  background-color: #add8e6;
+}
+
+.xChar {
+  color: red;
+  background-color: #ffcccb;
+}
+
+.oChar {
+  color: blue;
+  background-color: #add8eb;
+}
+
+.pastSteps {
+    border: 1px solid #000;
+    font-size: 0.75vw;
+    font-weight: bold;
+    height: 1.5vw;
+    margin-bottom: -1px;
+    width: 10vw;
+    background: white;
+    font: 1vw "Century Gothic", Futura, sans-serif;
+  }
+  
+  .pastStepsX{
+    background: #FFCCCB;
+  }
+  
+  .pastStepsO{
+    background: #ADD8EB;
+  }
+  
+  .pastSteps:hover {
+    background: #eeeeee;
+  }
+  
+  .result {
+    text-align: center;
+    font-size: 1.5vw;
+    line-height: 0px;
+    padding-bottom: 1vw;
+
+}
+
+  .resultXWin {
+    animation: blinker 2s linear infinite;
+    color: red;
+  }
+  
+  .resultOWin {
+    color: blue;
+    animation: blinker 2s linear infinite;
+  }
+  
+  .resultTie {
+    color: green;
+    animation: blinker 2s linear infinite;
+  }
+
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
